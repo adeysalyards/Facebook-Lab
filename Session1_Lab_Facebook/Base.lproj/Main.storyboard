@@ -7,7 +7,6 @@
         <!--Feed View Controller-->
         <scene sceneID="cuV-O1-WcF">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jeY-rb-JvI" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="pFy-hQ-U9x" customClass="FeedViewController" customModule="Session1_Lab_Facebook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yyL-nG-p3u">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -25,6 +24,10 @@
                                 <rect key="frame" x="0.0" y="106" width="320" height="462"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="home_feed" id="GkV-Ai-amd">
+                                        <rect key="frame" x="1" y="0.0" width="320" height="1025"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jD5-iY-8cW">
                                         <rect key="frame" x="24" y="348" width="278" height="119"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -32,10 +35,6 @@
                                             <segue destination="ZF3-q8-YbY" kind="push" id="N4B-DB-Ttp"/>
                                         </connections>
                                     </button>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="home_feed" id="GkV-Ai-amd">
-                                        <rect key="frame" x="1" y="0.0" width="320" height="1025"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                    </imageView>
                                 </subviews>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gaV-r0-E68">
@@ -67,6 +66,7 @@
                         <outlet property="scrollView" destination="T91-EZ-6ZP" id="qKi-dM-edg"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jeY-rb-JvI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="294" y="1888"/>
         </scene>
