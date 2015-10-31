@@ -1,26 +1,19 @@
 //
-//  FeedViewController.swift
+//  MessagesViewController.swift
 //  Session1_Lab_Facebook
 //
-//  Created by Salyards, Adey on 10/28/15.
+//  Created by Salyards, Adey on 10/29/15.
 //  Copyright © 2015 Salyards, Adey. All rights reserved.
 //
 
 import UIKit
 
-class FeedViewController: UIViewController {
+class MessagesViewController: UIViewController {
 
-    @IBOutlet weak var scrollView: UIScrollView!
-    
-    @IBOutlet weak var feedImageView: UIImageView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
-        scrollView.contentSize = feedImageView.image!.size
-        
-        dismissViewControllerAnimated(true, completion: nil)
-        
         // Do any additional setup after loading the view.
     }
 

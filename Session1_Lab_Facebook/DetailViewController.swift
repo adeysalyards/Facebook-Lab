@@ -10,16 +10,40 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    @IBOutlet weak var commentTextField: UITextField!
+    @IBOutlet weak var detailImageView: UIImageView!
     @IBOutlet weak var detailScroll: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        detailScroll.contentSize = CGSize(width: 320, height: 1000)
+         detailScroll.contentSize = detailImageView.image!.size
+        
+        /* NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardNotification:", name: UIKeyboardWillShowNotification, object: nil)
 
+        func keyboardNotification(notification: NSNotification){
+            UIView.animateWithDuration(0.5, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+                () -> Void in
+                self.commentTextField.frame = CGRectMake((self.commentTextField.frame.origin.x), (self.commentTextField.frame.origin.y) - 10, (self.commentTextField.frame.size.width), (self.commentTextField.frame.size.height))
+                }, completion: nil)
+        } */
+        
         // Do any additional setup after loading the view.
     }
-
+    
+    @IBAction func backButton(sender: AnyObject) {
+        navigationController?.popViewControllerAnimated(true)
+    }
+    
+    @IBAction func likeButton(sender: UIButton) {
+        sender.selected = true
+    }
+    
+    
+    @IBAction func onTap(sender: AnyObject) {
+        view.endEditing(true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

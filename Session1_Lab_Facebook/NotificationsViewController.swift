@@ -1,26 +1,22 @@
 //
-//  FeedViewController.swift
+//  NotificationsViewController.swift
 //  Session1_Lab_Facebook
 //
-//  Created by Salyards, Adey on 10/28/15.
+//  Created by Salyards, Adey on 10/29/15.
 //  Copyright © 2015 Salyards, Adey. All rights reserved.
 //
 
 import UIKit
 
-class FeedViewController: UIViewController {
+class NotificationsViewController: UIViewController {
 
-    @IBOutlet weak var scrollView: UIScrollView!
-    
-    @IBOutlet weak var feedImageView: UIImageView!
-    
+    @IBOutlet weak var notificationsImageView: UIImageView!
+    @IBOutlet weak var NotificationsScrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationsScrollView.contentSize = notificationsImageView.image!.size
 
-        scrollView.contentSize = feedImageView.image!.size
-        
-        dismissViewControllerAnimated(true, completion: nil)
-        
         // Do any additional setup after loading the view.
     }
 

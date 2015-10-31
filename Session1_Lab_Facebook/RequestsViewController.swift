@@ -1,26 +1,24 @@
 //
-//  FeedViewController.swift
+//  RequestsViewController.swift
 //  Session1_Lab_Facebook
 //
-//  Created by Salyards, Adey on 10/28/15.
+//  Created by Salyards, Adey on 10/29/15.
 //  Copyright © 2015 Salyards, Adey. All rights reserved.
 //
 
 import UIKit
 
-class FeedViewController: UIViewController {
-
-    @IBOutlet weak var scrollView: UIScrollView!
+class RequestsViewController: UIViewController {
     
-    @IBOutlet weak var feedImageView: UIImageView!
+    @IBOutlet weak var RequestsScrollView: UIScrollView!
+
+    @IBOutlet weak var requestsImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        RequestsScrollView.contentSize = requestsImageView.image!.size
 
-        scrollView.contentSize = feedImageView.image!.size
-        
-        dismissViewControllerAnimated(true, completion: nil)
-        
         // Do any additional setup after loading the view.
     }
 
