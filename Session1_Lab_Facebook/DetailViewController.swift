@@ -19,16 +19,16 @@ class DetailViewController: UIViewController {
         
          detailScroll.contentSize = detailImageView.image!.size
         
-        /* NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardNotification:", name: UIKeyboardWillShowNotification, object: nil)
-
-        func keyboardNotification(notification: NSNotification){
-            UIView.animateWithDuration(0.5, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
-                () -> Void in
-                self.commentTextField.frame = CGRectMake((self.commentTextField.frame.origin.x), (self.commentTextField.frame.origin.y) - 10, (self.commentTextField.frame.size.width), (self.commentTextField.frame.size.height))
-                }, completion: nil)
-        } */
+         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardNotification:", name: UIKeyboardWillShowNotification, object: nil)
         
         // Do any additional setup after loading the view.
+    }
+    
+    func keyboardNotification(notification: NSNotification){
+        UIView.animateWithDuration(0.5, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+            () -> Void in
+            self.commentTextField.frame = CGRectMake((self.commentTextField.frame.origin.x), (self.commentTextField.frame.origin.y) - 180, (self.commentTextField.frame.size.width), (self.commentTextField.frame.size.height))
+            }, completion: nil)
     }
     
     @IBAction func backButton(sender: AnyObject) {
